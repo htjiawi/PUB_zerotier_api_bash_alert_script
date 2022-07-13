@@ -89,6 +89,7 @@ checknode "NODE_ID16"
 Message=$(echo -e $Message)
 Subject="Zerotier Status Alert"
 
+echo $(date +"%D%T"), $send > /root/zero.log
 if test $send -ge 1
 then
    send_mail
